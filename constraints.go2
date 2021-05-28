@@ -1,0 +1,37 @@
+package constraints
+
+type Numeric interface {
+	type int, int8, int16, int32, int64,
+		uint, uint8, uint16, uint32, uint64, uintptr,
+		float32, float64,
+		complex64, complex128
+}
+
+type SignedInteger interface {
+	type int, int8, int16, int32, int64
+}
+
+type UnsignedInteger interface {
+	type uint, uint8, uint16, uint32, uint64, uintptr
+}
+
+type Float interface {
+	type float32, float64
+}
+
+type Complex interface {
+	type complex64, complex128
+}
+
+type Ordered interface {
+	type int, int8, int16, int32, int64,
+		uint, uint8, uint16, uint32, uint64, uintptr,
+		float32, float64,
+		string
+}
+
+type OrderedNumeric interface {
+	type int, int8, int16, int32, int64,
+		uint, uint8, uint16, uint32, uint64, uintptr,
+		float32, float64
+}
