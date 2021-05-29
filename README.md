@@ -1,4 +1,4 @@
-# go-constraints
+# go2pkg/constraints
 
 This repository is an experiment with Go2 Generic, which is planned for being
 [released in go1.18 beta](https://blog.golang.org/generics-proposal).
@@ -9,12 +9,15 @@ be renamed from `.go2` to `.go`.
 
 ## Using go2
 
+`go2go` is a command provided by Go team to experiment with Go2. It's a
+transition tool for working with Go2 when it's still in development. When Go2 is
+officially released, `go2go` will be no longer needed: developers should be able
+to use standard go commands to build and execute Go2 directly without `.go2`
+extension.
+
 ### Install go2go
 
-`go2go` is a command provided by Go team to experiment with Go2. When Go2 is
-officially released, `go2go` will be no longer needed. Developers should be able
-to use standard go commands to build and execute Go2 directly without `.go2`
-extension. To install `go2go`, follow the following steps:
+To install `go2go`, follow the following steps:
 
 1. Clone the go repository into a local directory (called `goroot`):
    ```sh
@@ -123,8 +126,8 @@ You can also build the `.go2` package to generate corresponding `.go` files, by
 calling `go2 build` inside the package directory:
 
 ```sh
-git clone https://github.com/olvrng/go-constraints
-cd go-constraints
+git clone https://github.com/go2pkg/constraints
+cd constraints
 rm *.go                   # remove generated files  
 go2 build
 ```
